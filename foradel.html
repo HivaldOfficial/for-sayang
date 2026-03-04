@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kado Spesial Buat Kamu ❤️</title>
+    <style>
+      body {
+        background-color: #ffe6e6; /* Warna pink pastel */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+      .card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(255, 77, 109, 0.2);
+        max-width: 400px;
+        width: 90%;
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      h1 {
+        color: #ff4d6d;
+        margin-bottom: 10px;
+      }
+      p {
+        color: #555;
+        line-height: 1.6;
+        font-size: 16px;
+      }
+      .hidden-message {
+        display: none;
+        margin-top: 25px;
+        padding: 20px;
+        background-color: #fff0f3;
+        border-left: 5px solid #ff4d6d;
+        border-radius: 8px;
+        animation: fadeIn 0.8s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      button {
+        background-color: #ff4d6d;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 30px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition:
+          background 0.3s,
+          transform 0.2s;
+        box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+      }
+      button:hover {
+        background-color: #c9184a;
+        transform: scale(1.05);
+      }
+      .ucapan-sayang {
+        text-align: left;
+        margin-top: 15px;
+        font-style: italic;
+        color: #c9184a;
+        font-weight: 500;
+        line-height: 1.8;
+      }
+      .lotm-joke {
+        font-size: 10px;
+        color: #ddd;
+        margin-top: 30px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Happy Birthday! tequilaakuu🎂</h1>
+      <p>Ada kado digital spesial nih buat kamu. Coba klik tombol di bawah ya!</p>
+
+      <button id="btnBuka">Buka Kado 🎁</button>
+
+      <div id="pesanRahasia" class="hidden-message">
+        <p><strong>Selamat bertambah usia, sayang! 🎉</strong></p>
+
+        <p class="ucapan-sayang">
+          "Terima kasih ya udah selalu jadi alasan aku tersenyum. Semoga di umur yang baru ini, semua impianmu tercapai, hari-harimu makin cerah, dan kita bisa terus sama-sama bikin banyak kenangan indah. Aku bersyukur banget punya kamu di
+          hidupku. Bahagia terus ya, kesayanganku! 💕"
+        </p>
+
+        <p><i>Love you endlessly! ❤️</i></p>
+
+        <div class="lotm-joke">Praise the Fool... eh salah, Praise You! ✨</div>
+      </div>
+    </div>
+
+    <script>
+      // Logika sederhana untuk memunculkan kado
+      document.getElementById("btnBuka").addEventListener("click", function () {
+        const pesan = document.getElementById("pesanRahasia");
+        const tombol = document.getElementById("btnBuka");
+
+        if (pesan.style.display === "none" || pesan.style.display === "") {
+          pesan.style.display = "block";
+          tombol.innerText = "Tutup Kado 🎀";
+        } else {
+          pesan.style.display = "none";
+          tombol.innerText = "Buka Kado 🎁";
+        }
+      });
+    </script>
+  </body>
+</html>
